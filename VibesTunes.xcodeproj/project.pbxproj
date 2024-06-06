@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		7E3AB3F02C11DCAC00C57EF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3AB3EF2C11DCAC00C57EF7 /* AppDelegate.swift */; };
 		7E3AB3F22C11DCAC00C57EF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3AB3F12C11DCAC00C57EF7 /* SceneDelegate.swift */; };
-		7E3AB3F42C11DCAC00C57EF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3AB3F32C11DCAC00C57EF7 /* ViewController.swift */; };
 		7E3AB3F92C11DCAE00C57EF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E3AB3F82C11DCAE00C57EF7 /* Assets.xcassets */; };
 		7E3AB3FC2C11DCAE00C57EF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E3AB3FA2C11DCAE00C57EF7 /* LaunchScreen.storyboard */; };
 		7E3AB4072C11DCAE00C57EF7 /* VibesTunesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3AB4062C11DCAE00C57EF7 /* VibesTunesTests.swift */; };
+		7E3AB4242C11E4AD00C57EF7 /* FeelingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3AB4232C11E4AD00C57EF7 /* FeelingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,12 +29,12 @@
 		7E3AB3EC2C11DCAC00C57EF7 /* VibesTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VibesTunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E3AB3EF2C11DCAC00C57EF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E3AB3F12C11DCAC00C57EF7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7E3AB3F32C11DCAC00C57EF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7E3AB3F82C11DCAE00C57EF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E3AB3FB2C11DCAE00C57EF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E3AB3FD2C11DCAE00C57EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E3AB4022C11DCAE00C57EF7 /* VibesTunesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VibesTunesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E3AB4062C11DCAE00C57EF7 /* VibesTunesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibesTunesTests.swift; sourceTree = "<group>"; };
+		7E3AB4232C11E4AD00C57EF7 /* FeelingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,9 +113,17 @@
 		7E3AB4212C11DFAE00C57EF7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				7E3AB3F32C11DCAC00C57EF7 /* ViewController.swift */,
+				7E3AB4222C11E49800C57EF7 /* Feelings */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		7E3AB4222C11E49800C57EF7 /* Feelings */ = {
+			isa = PBXGroup;
+			children = (
+				7E3AB4232C11E4AD00C57EF7 /* FeelingsViewController.swift */,
+			);
+			path = Feelings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,8 +226,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E3AB3F42C11DCAC00C57EF7 /* ViewController.swift in Sources */,
 				7E3AB3F02C11DCAC00C57EF7 /* AppDelegate.swift in Sources */,
+				7E3AB4242C11E4AD00C57EF7 /* FeelingsViewController.swift in Sources */,
 				7E3AB3F22C11DCAC00C57EF7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
