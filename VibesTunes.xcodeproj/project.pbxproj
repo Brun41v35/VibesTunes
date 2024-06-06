@@ -14,19 +14,10 @@
 		7E3AB3F92C11DCAE00C57EF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E3AB3F82C11DCAE00C57EF7 /* Assets.xcassets */; };
 		7E3AB3FC2C11DCAE00C57EF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E3AB3FA2C11DCAE00C57EF7 /* LaunchScreen.storyboard */; };
 		7E3AB4072C11DCAE00C57EF7 /* VibesTunesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3AB4062C11DCAE00C57EF7 /* VibesTunesTests.swift */; };
-		7E3AB4112C11DCAE00C57EF7 /* VibesTunesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3AB4102C11DCAE00C57EF7 /* VibesTunesUITests.swift */; };
-		7E3AB4132C11DCAE00C57EF7 /* VibesTunesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3AB4122C11DCAE00C57EF7 /* VibesTunesUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		7E3AB4032C11DCAE00C57EF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7E3AB3E42C11DCAC00C57EF7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7E3AB3EB2C11DCAC00C57EF7;
-			remoteInfo = VibesTunes;
-		};
-		7E3AB40D2C11DCAE00C57EF7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7E3AB3E42C11DCAC00C57EF7 /* Project object */;
 			proxyType = 1;
@@ -46,9 +37,6 @@
 		7E3AB3FD2C11DCAE00C57EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E3AB4022C11DCAE00C57EF7 /* VibesTunesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VibesTunesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E3AB4062C11DCAE00C57EF7 /* VibesTunesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibesTunesTests.swift; sourceTree = "<group>"; };
-		7E3AB40C2C11DCAE00C57EF7 /* VibesTunesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VibesTunesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E3AB4102C11DCAE00C57EF7 /* VibesTunesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibesTunesUITests.swift; sourceTree = "<group>"; };
-		7E3AB4122C11DCAE00C57EF7 /* VibesTunesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibesTunesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +54,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7E3AB4092C11DCAE00C57EF7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +62,6 @@
 			children = (
 				7E3AB3EE2C11DCAC00C57EF7 /* VibesTunes */,
 				7E3AB4052C11DCAE00C57EF7 /* VibesTunesTests */,
-				7E3AB40F2C11DCAE00C57EF7 /* VibesTunesUITests */,
 				7E3AB3ED2C11DCAC00C57EF7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +71,6 @@
 			children = (
 				7E3AB3EC2C11DCAC00C57EF7 /* VibesTunes.app */,
 				7E3AB4022C11DCAE00C57EF7 /* VibesTunesTests.xctest */,
-				7E3AB40C2C11DCAE00C57EF7 /* VibesTunesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,15 +95,6 @@
 				7E3AB4062C11DCAE00C57EF7 /* VibesTunesTests.swift */,
 			);
 			path = VibesTunesTests;
-			sourceTree = "<group>";
-		};
-		7E3AB40F2C11DCAE00C57EF7 /* VibesTunesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				7E3AB4102C11DCAE00C57EF7 /* VibesTunesUITests.swift */,
-				7E3AB4122C11DCAE00C57EF7 /* VibesTunesUITestsLaunchTests.swift */,
-			);
-			path = VibesTunesUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +135,6 @@
 			productReference = 7E3AB4022C11DCAE00C57EF7 /* VibesTunesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7E3AB40B2C11DCAE00C57EF7 /* VibesTunesUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7E3AB41C2C11DCAE00C57EF7 /* Build configuration list for PBXNativeTarget "VibesTunesUITests" */;
-			buildPhases = (
-				7E3AB4082C11DCAE00C57EF7 /* Sources */,
-				7E3AB4092C11DCAE00C57EF7 /* Frameworks */,
-				7E3AB40A2C11DCAE00C57EF7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7E3AB40E2C11DCAE00C57EF7 /* PBXTargetDependency */,
-			);
-			name = VibesTunesUITests;
-			productName = VibesTunesUITests;
-			productReference = 7E3AB40C2C11DCAE00C57EF7 /* VibesTunesUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +149,6 @@
 						CreatedOnToolsVersion = 15.2;
 					};
 					7E3AB4012C11DCAE00C57EF7 = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = 7E3AB3EB2C11DCAC00C57EF7;
-					};
-					7E3AB40B2C11DCAE00C57EF7 = {
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = 7E3AB3EB2C11DCAC00C57EF7;
 					};
@@ -221,7 +169,6 @@
 			targets = (
 				7E3AB3EB2C11DCAC00C57EF7 /* VibesTunes */,
 				7E3AB4012C11DCAE00C57EF7 /* VibesTunesTests */,
-				7E3AB40B2C11DCAE00C57EF7 /* VibesTunesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,13 +185,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7E3AB4002C11DCAE00C57EF7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7E3AB40A2C11DCAE00C57EF7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -272,15 +212,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7E3AB4082C11DCAE00C57EF7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7E3AB4132C11DCAE00C57EF7 /* VibesTunesUITestsLaunchTests.swift in Sources */,
-				7E3AB4112C11DCAE00C57EF7 /* VibesTunesUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -288,11 +219,6 @@
 			isa = PBXTargetDependency;
 			target = 7E3AB3EB2C11DCAC00C57EF7 /* VibesTunes */;
 			targetProxy = 7E3AB4032C11DCAE00C57EF7 /* PBXContainerItemProxy */;
-		};
-		7E3AB40E2C11DCAE00C57EF7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7E3AB3EB2C11DCAC00C57EF7 /* VibesTunes */;
-			targetProxy = 7E3AB40D2C11DCAE00C57EF7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -547,50 +473,6 @@
 			};
 			name = Release;
 		};
-		7E3AB41D2C11DCAE00C57EF7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QXX4852TTD;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = brunosilva.VibesTunesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_TARGET_NAME = VibesTunes;
-			};
-			name = Debug;
-		};
-		7E3AB41E2C11DCAE00C57EF7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QXX4852TTD;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = brunosilva.VibesTunesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_TARGET_NAME = VibesTunes;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -617,15 +499,6 @@
 			buildConfigurations = (
 				7E3AB41A2C11DCAE00C57EF7 /* Debug */,
 				7E3AB41B2C11DCAE00C57EF7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7E3AB41C2C11DCAE00C57EF7 /* Build configuration list for PBXNativeTarget "VibesTunesUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7E3AB41D2C11DCAE00C57EF7 /* Debug */,
-				7E3AB41E2C11DCAE00C57EF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
