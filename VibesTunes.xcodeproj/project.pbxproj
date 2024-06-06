@@ -76,12 +76,9 @@
 		7E3AB3EE2C11DCAC00C57EF7 /* VibesTunes */ = {
 			isa = PBXGroup;
 			children = (
-				7E3AB3EF2C11DCAC00C57EF7 /* AppDelegate.swift */,
-				7E3AB3F12C11DCAC00C57EF7 /* SceneDelegate.swift */,
-				7E3AB3F32C11DCAC00C57EF7 /* ViewController.swift */,
-				7E3AB3F82C11DCAE00C57EF7 /* Assets.xcassets */,
-				7E3AB3FA2C11DCAE00C57EF7 /* LaunchScreen.storyboard */,
-				7E3AB3FD2C11DCAE00C57EF7 /* Info.plist */,
+				7E3AB41F2C11DF3E00C57EF7 /* AppDelegate */,
+				7E3AB4212C11DFAE00C57EF7 /* Scenes */,
+				7E3AB4202C11DF4B00C57EF7 /* Resources */,
 			);
 			path = VibesTunes;
 			sourceTree = "<group>";
@@ -92,6 +89,33 @@
 				7E3AB4062C11DCAE00C57EF7 /* VibesTunesTests.swift */,
 			);
 			path = VibesTunesTests;
+			sourceTree = "<group>";
+		};
+		7E3AB41F2C11DF3E00C57EF7 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7E3AB3EF2C11DCAC00C57EF7 /* AppDelegate.swift */,
+				7E3AB3F12C11DCAC00C57EF7 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		7E3AB4202C11DF4B00C57EF7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7E3AB3F82C11DCAE00C57EF7 /* Assets.xcassets */,
+				7E3AB3FA2C11DCAE00C57EF7 /* LaunchScreen.storyboard */,
+				7E3AB3FD2C11DCAE00C57EF7 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7E3AB4212C11DFAE00C57EF7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				7E3AB3F32C11DCAC00C57EF7 /* ViewController.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,7 +382,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QXX4852TTD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = VibesTunes/Info.plist;
+				INFOPLIST_FILE = VibesTunes/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -390,7 +414,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QXX4852TTD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = VibesTunes/Info.plist;
+				INFOPLIST_FILE = VibesTunes/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
