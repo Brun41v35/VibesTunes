@@ -10,7 +10,6 @@
 		7E3AB3F02C11DCAC00C57EF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3AB3EF2C11DCAC00C57EF7 /* AppDelegate.swift */; };
 		7E3AB3F22C11DCAC00C57EF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3AB3F12C11DCAC00C57EF7 /* SceneDelegate.swift */; };
 		7E3AB3F42C11DCAC00C57EF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3AB3F32C11DCAC00C57EF7 /* ViewController.swift */; };
-		7E3AB3F72C11DCAC00C57EF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E3AB3F52C11DCAC00C57EF7 /* Main.storyboard */; };
 		7E3AB3F92C11DCAE00C57EF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E3AB3F82C11DCAE00C57EF7 /* Assets.xcassets */; };
 		7E3AB3FC2C11DCAE00C57EF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E3AB3FA2C11DCAE00C57EF7 /* LaunchScreen.storyboard */; };
 		7E3AB4072C11DCAE00C57EF7 /* VibesTunesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3AB4062C11DCAE00C57EF7 /* VibesTunesTests.swift */; };
@@ -31,7 +30,6 @@
 		7E3AB3EF2C11DCAC00C57EF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E3AB3F12C11DCAC00C57EF7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7E3AB3F32C11DCAC00C57EF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7E3AB3F62C11DCAC00C57EF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E3AB3F82C11DCAE00C57EF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E3AB3FB2C11DCAE00C57EF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E3AB3FD2C11DCAE00C57EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 				7E3AB3EF2C11DCAC00C57EF7 /* AppDelegate.swift */,
 				7E3AB3F12C11DCAC00C57EF7 /* SceneDelegate.swift */,
 				7E3AB3F32C11DCAC00C57EF7 /* ViewController.swift */,
-				7E3AB3F52C11DCAC00C57EF7 /* Main.storyboard */,
 				7E3AB3F82C11DCAE00C57EF7 /* Assets.xcassets */,
 				7E3AB3FA2C11DCAE00C57EF7 /* LaunchScreen.storyboard */,
 				7E3AB3FD2C11DCAE00C57EF7 /* Info.plist */,
@@ -180,7 +177,6 @@
 			files = (
 				7E3AB3FC2C11DCAE00C57EF7 /* LaunchScreen.storyboard in Resources */,
 				7E3AB3F92C11DCAE00C57EF7 /* Assets.xcassets in Resources */,
-				7E3AB3F72C11DCAC00C57EF7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,14 +219,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7E3AB3F52C11DCAC00C57EF7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7E3AB3F62C11DCAC00C57EF7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7E3AB3FA2C11DCAE00C57EF7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -373,7 +361,7 @@
 				INFOPLIST_FILE = VibesTunes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -405,7 +393,7 @@
 				INFOPLIST_FILE = VibesTunes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
