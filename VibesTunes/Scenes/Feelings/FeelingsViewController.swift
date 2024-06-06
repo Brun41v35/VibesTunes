@@ -25,6 +25,7 @@ final class FeelingsViewController: UIViewController {
     private func setup() {
         setupViewHierarchy()
         setupConstraints()
+        setupBindLayoutEvents()
         setupBackgroundColor()
     }
 
@@ -39,7 +40,18 @@ final class FeelingsViewController: UIViewController {
         ])
     }
 
+    private func setupBindLayoutEvents() {
+        searchItemButton.addTarget(self,
+                                   action: #selector(didTapSearchItemButton),
+                                   for: .touchUpInside)
+    }
+
     private func setupBackgroundColor() {
         view.backgroundColor = .systemBackground
+    }
+
+    @objc
+    private func didTapSearchItemButton() {
+        print("Search..")
     }
 }
