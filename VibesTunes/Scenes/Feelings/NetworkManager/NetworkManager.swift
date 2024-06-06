@@ -7,10 +7,7 @@ final class NetworkManager {}
 extension NetworkManager: NetworkManagerType {
 
     func fetchData() {
-
-        //        guard let url = URL(string: "https://itunes.apple.com/search?" + "media=ebook&term=\(terms)") else { return }
-
-        guard let url = URL(string: "https://itunes.apple.com/search?term=jack+johnson") else { return }
+        guard let url = URL(string: "https://itunes.apple.com/search?term=sad+music&media=music&entity=musicTrack") else { return }
         let request = URLRequest(url: url)
 
         URLSession.shared.dataTask(with: request) { data, response, error in
@@ -31,7 +28,7 @@ extension NetworkManager: NetworkManagerType {
             }
 
             let decoded = String(data: data, encoding: .utf8)
-            print("Data: \(String(describing: decoded))")
+            print("\(String(describing: decoded))")
         }
         .resume()
     }
