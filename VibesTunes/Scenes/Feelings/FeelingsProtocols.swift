@@ -1,12 +1,5 @@
 import UIKit
 
-enum APIError: Error {
-    case invalidURL
-    case invalidResponse
-    case invalidData
-    case unableToComplete
-}
-
 protocol NetworkManagerType {
     typealias Response = Swift.Result<(Songs), APIError>
 
