@@ -42,8 +42,13 @@ extension NetworkManager: NetworkManagerType {
                 return
             }
 
-            let decoded = String(data: data, encoding: .utf8)
-            print(decoded)
+            do {
+                let decoder = JSONDecoder()
+                let decoderResponse = try decoder.decode(Songs.self, from: data)
+                completion(.success(decoderResponse))
+            } catch {
+                completion(.failure(.unableToComplete))
+            }
         }
         .resume()
     }
