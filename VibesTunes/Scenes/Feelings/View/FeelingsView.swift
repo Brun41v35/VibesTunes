@@ -1,9 +1,5 @@
 import UIKit
 
-protocol FeelingsViewType where Self: UIView {
-    var didTapSearchItem: (() -> Void)? { get set }
-}
-
 final class FeelingsView: UIView, FeelingsViewType {
 
     // MARK: - Internal Properties
