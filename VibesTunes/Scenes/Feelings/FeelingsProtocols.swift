@@ -1,5 +1,7 @@
 import Foundation
 
 protocol NetworkManagerType {
-    func fetchData()
+    typealias Response = Swift.Result<(Songs), Error>
+
+    func fetchData(typeSong: String, completion: @escaping (Response) -> Void)
 }
