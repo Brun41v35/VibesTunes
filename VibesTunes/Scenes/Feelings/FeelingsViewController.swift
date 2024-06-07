@@ -69,9 +69,9 @@ final class FeelingsViewController: UIViewController {
         network.fetchData(typeSong: "sad") { result in
             switch result {
             case .success(let response):
-                print(response)
+                return // TODO: Handle response
             case .failure(let failure):
-                print(failure)
+                return // TODO: Handle failure
             }
         }
     }
