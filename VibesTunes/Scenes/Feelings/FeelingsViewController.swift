@@ -4,11 +4,14 @@ final class FeelingsViewController: UIViewController {
 
     // MARK: - Private Properties
 
+    private let contentView: FeelingsViewType
     private let network: NetworkManagerType
 
     // MARK: - Init
 
-    init(network: NetworkManagerType = NetworkManager()) {
+    init(contentView: FeelingsViewType = FeelingsView(),
+         network: NetworkManagerType = NetworkManager()) {
+        self.contentView = contentView
         self.network = network
         super.init(nibName: nil, bundle: nil)
     }
@@ -22,12 +25,34 @@ final class FeelingsViewController: UIViewController {
 
     override func loadView() {
         super.loadView()
-        view = FeelingsView()
+        view = contentView
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
     }
 
     // MARK: - Private Methods
+
+    private func setup() {
+        setupBindLayoutEvents()
+    }
+
+    private func setupBindLayoutEvents() {
+        contentView.didTapSearchItem = { [weak self] in
+            self?.loadData()
+        }
+    }
+
+    private func loadData() {
+        network.fetchData(typeSong: "sad") { result in
+            switch result {
+            case .success(let response):
+                return // TODO: Handle response
+            case .failure(let failure):
+                return // TODO: Handle failure
+            }
+        }
+    }
 }

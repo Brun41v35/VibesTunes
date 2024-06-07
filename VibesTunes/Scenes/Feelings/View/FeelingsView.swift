@@ -1,6 +1,14 @@
 import UIKit
 
-final class FeelingsView: UIView {
+protocol FeelingsViewType where Self: UIView {
+    var didTapSearchItem: (() -> Void)? { get set }
+}
+
+final class FeelingsView: UIView, FeelingsViewType {
+
+    // MARK: - Internal Properties
+
+    var didTapSearchItem: (() -> Void)?
 
     // MARK: - Private Properties
 
@@ -56,5 +64,7 @@ final class FeelingsView: UIView {
     }
 
     @objc
-    private func didTapSearchItemButton() {}
+    private func didTapSearchItemButton() {
+        didTapSearchItem?()
+    }
 }
