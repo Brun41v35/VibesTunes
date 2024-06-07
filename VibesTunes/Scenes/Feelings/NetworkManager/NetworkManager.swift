@@ -1,16 +1,28 @@
 import Foundation
 
-final class NetworkManager {}
+final class NetworkManager {
+
+    // MARK: - Private Properties
+
+    private let session: URLSession
+
+    // MARK: - Init
+
+    init(session: URLSession = .shared) {
+        self.session = session
+    }
+}
 
 // MARK: - Extension
 
 extension NetworkManager: NetworkManagerType {
 
-    func fetchData() {
-        guard let url = URL(string: "https://itunes.apple.com/search?term=sad+music&media=music&entity=musicTrack") else { return }
+    func fetchData(typeSong: String, completion: @escaping (Response) -> Void) {
+
+        guard let url = URL(string: "https://itunes.apple.com/search?term=\(typeSong)+music&media=music&entity=musicTrack") else { return }
         let request = URLRequest(url: url)
 
-        URLSession.shared.dataTask(with: request) { data, response, error in
+        session.dataTask(with: request) { data, response, error in
 
             if let error = error {
                 print("error: \(String(describing: error))")
@@ -28,7 +40,7 @@ extension NetworkManager: NetworkManagerType {
             }
 
             let decoded = String(data: data, encoding: .utf8)
-            print("\(String(describing: decoded))")
+            print(decoded)
         }
         .resume()
     }

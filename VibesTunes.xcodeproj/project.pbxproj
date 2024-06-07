@@ -15,6 +15,7 @@
 		7E3AB4242C11E4AD00C57EF7 /* FeelingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3AB4232C11E4AD00C57EF7 /* FeelingsViewController.swift */; };
 		7E3AB4272C11F38A00C57EF7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3AB4262C11F38A00C57EF7 /* NetworkManager.swift */; };
 		7E3AB4292C11F41000C57EF7 /* FeelingsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3AB4282C11F41000C57EF7 /* FeelingsProtocols.swift */; };
+		7EF928492C12A2CC007793AD /* Songs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF928482C12A2CC007793AD /* Songs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		7E3AB4232C11E4AD00C57EF7 /* FeelingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsViewController.swift; sourceTree = "<group>"; };
 		7E3AB4262C11F38A00C57EF7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7E3AB4282C11F41000C57EF7 /* FeelingsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsProtocols.swift; sourceTree = "<group>"; };
+		7EF928482C12A2CC007793AD /* Songs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Songs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		7E3AB3EE2C11DCAC00C57EF7 /* VibesTunes */ = {
 			isa = PBXGroup;
 			children = (
+				7EF928472C12A2A9007793AD /* Model */,
 				7E3AB41F2C11DF3E00C57EF7 /* AppDelegate */,
 				7E3AB4212C11DFAE00C57EF7 /* Scenes */,
 				7E3AB4202C11DF4B00C57EF7 /* Resources */,
@@ -138,6 +141,14 @@
 				7E3AB4262C11F38A00C57EF7 /* NetworkManager.swift */,
 			);
 			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		7EF928472C12A2A9007793AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7EF928482C12A2CC007793AD /* Songs.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EF928492C12A2CC007793AD /* Songs.swift in Sources */,
 				7E3AB4272C11F38A00C57EF7 /* NetworkManager.swift in Sources */,
 				7E3AB4292C11F41000C57EF7 /* FeelingsProtocols.swift in Sources */,
 				7E3AB3F02C11DCAC00C57EF7 /* AppDelegate.swift in Sources */,

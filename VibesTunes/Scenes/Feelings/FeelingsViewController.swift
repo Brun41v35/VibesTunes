@@ -66,6 +66,8 @@ final class FeelingsViewController: UIViewController {
 
     @objc
     private func didTapSearchItemButton() {
-        network.fetchData()
+        network.fetchData(typeSong: "sad") {
+            
+        }
     }
 }
