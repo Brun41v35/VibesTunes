@@ -6,15 +6,6 @@ final class FeelingsViewController: UIViewController {
 
     private let network: NetworkManagerType
 
-    private let searchItemButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Search Item", for: .normal)
-        button.configuration = .tinted()
-        button.configuration?.baseBackgroundColor = .systemRed
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-
     // MARK: - Init
 
     init(network: NetworkManagerType = NetworkManager()) {
@@ -29,50 +20,14 @@ final class FeelingsViewController: UIViewController {
 
     // MARK: - Life Cycle
 
+    override func loadView() {
+        super.loadView()
+        view = FeelingsView()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
     }
 
     // MARK: - Private Methods
-
-    private func setup() {
-        setupViewHierarchy()
-        setupConstraints()
-        setupBindLayoutEvents()
-        setupBackgroundColor()
-    }
-
-    private func setupViewHierarchy() {
-        view.addSubview(searchItemButton)
-    }
-
-    private func setupConstraints() {
-        NSLayoutConstraint.activate([
-            searchItemButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            searchItemButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
-    }
-
-    private func setupBindLayoutEvents() {
-        searchItemButton.addTarget(self,
-                                   action: #selector(didTapSearchItemButton),
-                                   for: .touchUpInside)
-    }
-
-    private func setupBackgroundColor() {
-        view.backgroundColor = .systemBackground
-    }
-
-    @objc
-    private func didTapSearchItemButton() {
-        network.fetchData(typeSong: "sad") { result in
-            switch result {
-            case .success(let response):
-                return // TODO: Handle response
-            case .failure(let failure):
-                return // TODO: Handle failure
-            }
-        }
-    }
 }
