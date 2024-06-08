@@ -4,7 +4,9 @@ final class FeelingsView: UIView, FeelingsViewType {
 
     // MARK: - Internal Properties
 
-    var didTapSearchItem: (() -> Void)?
+    var didTapHappyButton: (() -> Void)?
+    var didTapNormalButton: (() -> Void)?
+    var didTapSadButton: (() -> Void)?
 
     // MARK: - Private Properties
 
@@ -87,8 +89,16 @@ final class FeelingsView: UIView, FeelingsViewType {
     }
 
     private func setupBindLayoutEvents() {
+        happyFeelingButton.addTarget(self,
+                                     action: #selector(didTapHappyAction),
+                                     for: .touchUpInside)
+
+        normalFeelingButton.addTarget(self,
+                                      action: #selector(didTapNormalAction),
+                                      for: .touchUpInside)
+
         sadFeelingButton.addTarget(self,
-                                   action: #selector(didTapSearchItemButton),
+                                   action: #selector(didTapSadAction),
                                    for: .touchUpInside)
     }
 
@@ -97,7 +107,17 @@ final class FeelingsView: UIView, FeelingsViewType {
     }
 
     @objc
-    private func didTapSearchItemButton() {
-        didTapSearchItem?()
+    private func didTapHappyAction() {
+        didTapHappyButton?()
+    }
+
+    @objc
+    private func didTapNormalAction() {
+        didTapNormalButton?()
+    }
+
+    @objc
+    private func didTapSadAction() {
+        didTapSadButton?()
     }
 }

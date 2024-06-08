@@ -5,12 +5,14 @@ protocol NetworkManagerType {
 }
 
 protocol FeelingsViewType where Self: UIView {
-    var didTapSearchItem: (() -> Void)? { get set }
+    var didTapHappyButton: (() -> Void)? { get set }
+    var didTapNormalButton: (() -> Void)? { get set }
+    var didTapSadButton: (() -> Void)? { get set }
 }
 
 protocol FeelingsPresenterType {
     var viewController: FeelingsViewControllerType? { get set }
-    func loadData()
+    func loadData(with feeling: String)
 }
 
 protocol FeelingsAdapterType {
