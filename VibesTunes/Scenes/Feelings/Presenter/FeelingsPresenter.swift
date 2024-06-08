@@ -2,11 +2,15 @@ import Foundation
 
 final class FeelingsPresenter {
 
+    // MARK: - Internal Properties
+
+    weak var viewController: FeelingsViewControllerType?
+
     // MARK: - Private Properties
 
     private let networkManager: NetworkManagerType
     private let adapter: FeelingsAdapterType
-    
+
     // MARK: - Init
 
     init(networkManager: NetworkManagerType,
@@ -26,7 +30,8 @@ final class FeelingsPresenter {
     private func handleInformations(result: APIResult) {
         switch result {
         case .success(let response):
-            let viewModel = adapter.adapt(songs: response)
+            let songsModel = adapter.adapt(songs: response)
+            viewController?.pushSongsViewController(with: songsModel)
         case .failure(let failure):
             return // TODO: Handle failure
         }
