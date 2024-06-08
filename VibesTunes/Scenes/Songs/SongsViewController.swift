@@ -5,13 +5,19 @@ final class SongsViewController: UITableViewController {
     // MARK: - Private Properties
 
     private let identifier = "SongViewCell"
+    private let songsModel: SongsModel
 
-    private let songsModel = SongsModel(listSongs: [
-        SongViewCellViewModel(nameArtist: "nameArtist", nameSong: "nameSong"),
-        SongViewCellViewModel(nameArtist: "nameArtist", nameSong: "nameSong"),
-        SongViewCellViewModel(nameArtist: "nameArtist", nameSong: "nameSong"),
-        SongViewCellViewModel(nameArtist: "nameArtist", nameSong: "nameSong")
-    ])
+    // MARK: - Init
+
+    init(songsModel: SongsModel) {
+        self.songsModel = songsModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - Life Cycle
 
