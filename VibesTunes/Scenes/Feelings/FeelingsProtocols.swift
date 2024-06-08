@@ -1,11 +1,22 @@
 import UIKit
 
 protocol NetworkManagerType {
-    typealias Response = Swift.Result<(Songs), APIError>
-
-    func fetchData(typeSong: String, completion: @escaping (Response) -> Void)
+    func fetchData(typeSong: String, completion: @escaping (APIResult) -> Void)
 }
 
 protocol FeelingsViewType where Self: UIView {
     var didTapSearchItem: (() -> Void)? { get set }
+}
+
+protocol FeelingsPresenterType {
+    var viewController: FeelingsViewControllerType? { get set }
+    func loadData()
+}
+
+protocol FeelingsAdapterType {
+    func adapt(songs: Songs) -> SongsModel
+}
+
+protocol FeelingsViewControllerType: AnyObject {
+    func pushSongsViewController(with viewModel: SongsModel)
 }

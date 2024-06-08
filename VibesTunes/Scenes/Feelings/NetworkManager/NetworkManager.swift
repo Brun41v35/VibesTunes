@@ -18,7 +18,7 @@ final class NetworkManager {
 extension NetworkManager: NetworkManagerType {
 
     func fetchData(typeSong: String,
-                   completion: @escaping (Response) -> Void) {
+                   completion: @escaping (APIResult) -> Void) {
 
         guard let url = URL(string: "https://itunes.apple.com/search?term=\(typeSong)+music&media=music&entity=musicTrack") else { return }
         let request = URLRequest(url: url)
