@@ -51,6 +51,9 @@ final class FeelingsViewController: UIViewController {
 extension FeelingsViewController: FeelingsViewControllerType {
 
     func pushSongsViewController(with viewModel: SongsModel) {
-        // TODO: Push SongsViewController..
+        DispatchQueue.main.async {
+            let songsViewController = SongsViewController(songsModel: viewModel)
+            self.navigationController?.pushViewController(songsViewController, animated: true)
+        }
     }
 }
