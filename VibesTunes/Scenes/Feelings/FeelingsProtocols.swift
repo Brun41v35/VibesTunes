@@ -9,6 +9,7 @@ protocol FeelingsViewType where Self: UIView {
 }
 
 protocol FeelingsPresenterType {
+    var viewController: FeelingsViewControllerType? { get set }
     func loadData()
 }
 
@@ -16,6 +17,6 @@ protocol FeelingsAdapterType {
     func adapt(songs: Songs) -> SongsModel
 }
 
-protocol FeelingsViewControllerType {
+protocol FeelingsViewControllerType: AnyObject {
     func pushSongsViewController(with viewModel: SongsModel)
 }
