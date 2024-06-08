@@ -9,6 +9,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let presenter = FeelingsPresenter(networkManager: NetworkManager())
         let feelingsViewController = FeelingsViewController(presenter: presenter)
+        presenter.viewController = feelingsViewController
 
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = UINavigationController(rootViewController: feelingsViewController)
