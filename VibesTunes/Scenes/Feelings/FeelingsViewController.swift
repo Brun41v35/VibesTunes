@@ -40,8 +40,16 @@ final class FeelingsViewController: UIViewController {
     }
 
     private func setupBindLayoutEvents() {
-        contentView.didTapSearchItem = { [weak self] in
-            self?.presenter.loadData()
+        contentView.didTapHappyButton = { [weak self] in
+            self?.presenter.loadData(with: "Happy")
+        }
+
+        contentView.didTapNormalButton = { [weak self] in
+            self?.presenter.loadData(with: "Random")
+        }
+
+        contentView.didTapSadButton = { [weak self] in
+            self?.presenter.loadData(with: "Sad")
         }
     }
 }

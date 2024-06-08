@@ -4,15 +4,50 @@ final class FeelingsView: UIView, FeelingsViewType {
 
     // MARK: - Internal Properties
 
-    var didTapSearchItem: (() -> Void)?
+    var didTapHappyButton: (() -> Void)?
+    var didTapNormalButton: (() -> Void)?
+    var didTapSadButton: (() -> Void)?
 
     // MARK: - Private Properties
 
-    private let searchItemButton: UIButton = {
+    private let containerStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 20
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+
+    private let sadFeelingButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Search Item", for: .normal)
-        button.configuration = .tinted()
-        button.configuration?.baseBackgroundColor = .systemRed
+        button.setTitle("Sad", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 8
+        button.backgroundColor = .systemRed
+        button.layer.opacity = 0.4
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+
+    private let normalFeelingButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Normal", for: .normal)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 8
+        button.backgroundColor = .systemBlue
+        button.layer.opacity = 0.4
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+
+    private let happyFeelingButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Happy", for: .normal)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 8
+        button.backgroundColor = .systemGreen
+        button.layer.opacity = 0.4
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -39,19 +74,31 @@ final class FeelingsView: UIView, FeelingsViewType {
     }
 
     private func setupViewHierarchy() {
-        addSubview(searchItemButton)
+        addSubview(containerStackView)
+        containerStackView.addArrangedSubview(happyFeelingButton)
+        containerStackView.addArrangedSubview(normalFeelingButton)
+        containerStackView.addArrangedSubview(sadFeelingButton)
     }
 
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            searchItemButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            searchItemButton.centerYAnchor.constraint(equalTo: centerYAnchor)
+            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
+            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
+            containerStackView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
 
     private func setupBindLayoutEvents() {
-        searchItemButton.addTarget(self,
-                                   action: #selector(didTapSearchItemButton),
+        happyFeelingButton.addTarget(self,
+                                     action: #selector(didTapHappyAction),
+                                     for: .touchUpInside)
+
+        normalFeelingButton.addTarget(self,
+                                      action: #selector(didTapNormalAction),
+                                      for: .touchUpInside)
+
+        sadFeelingButton.addTarget(self,
+                                   action: #selector(didTapSadAction),
                                    for: .touchUpInside)
     }
 
@@ -60,7 +107,17 @@ final class FeelingsView: UIView, FeelingsViewType {
     }
 
     @objc
-    private func didTapSearchItemButton() {
-        didTapSearchItem?()
+    private func didTapHappyAction() {
+        didTapHappyButton?()
+    }
+
+    @objc
+    private func didTapNormalAction() {
+        didTapNormalButton?()
+    }
+
+    @objc
+    private func didTapSadAction() {
+        didTapSadButton?()
     }
 }
