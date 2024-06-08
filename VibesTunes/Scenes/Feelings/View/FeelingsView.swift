@@ -86,6 +86,12 @@ final class FeelingsView: UIView, FeelingsViewType {
             containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
             containerStackView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
+
+        NSLayoutConstraint.activate([
+            happyFeelingButton.heightAnchor.constraint(equalToConstant: 50),
+            normalFeelingButton.heightAnchor.constraint(equalToConstant: 50),
+            sadFeelingButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
     }
 
     private func setupBindLayoutEvents() {
