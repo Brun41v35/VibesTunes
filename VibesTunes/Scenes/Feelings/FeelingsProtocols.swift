@@ -11,3 +11,11 @@ protocol FeelingsViewType where Self: UIView {
 protocol FeelingsPresenterType {
     func loadData()
 }
+
+protocol FeelingsAdapterType {
+    func adapt(songs: Songs) -> SongsModel
+}
+
+protocol FeelingsViewControllerType {
+    func pushSongsViewController(with viewModel: SongsModel)
+}

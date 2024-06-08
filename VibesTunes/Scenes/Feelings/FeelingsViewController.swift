@@ -45,3 +45,12 @@ final class FeelingsViewController: UIViewController {
         }
     }
 }
+
+// MARK: - FeelingsViewControllerType
+
+extension FeelingsViewController: FeelingsViewControllerType {
+
+    func pushSongsViewController(with viewModel: SongsModel) {
+        // TODO: Push SongsViewController..
+    }
+}
