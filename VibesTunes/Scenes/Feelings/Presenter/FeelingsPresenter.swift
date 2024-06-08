@@ -15,13 +15,20 @@ final class FeelingsPresenter {
     // MARK: - Private Methods
 
     private func fetchData() {
-        networkManager.fetchData(typeSong: "sad") { result in
-            switch result {
-            case .success(let response):
-                return // TODO: Handle response
-            case .failure(let failure):
-                return // TODO: Handle failure
+        networkManager.fetchData(typeSong: "sad") { [weak self] result in
+            self?.handleInformations(result: result)
+        }
+    }
+
+    private func handleInformations(result: APIResult) {
+        switch result {
+        case .success(let response):
+            let listSongs = response.results.map { value in
+                return SongViewCellViewModel(nameArtist: value.artistName, nameSong: value.trackName)
             }
+            let viewModel = SongsModel(listSongs: listSongs)
+        case .failure(let failure):
+            return // TODO: Handle failure
         }
     }
 }
