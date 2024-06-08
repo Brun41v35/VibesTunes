@@ -23,7 +23,7 @@ final class FeelingsView: UIView, FeelingsViewType {
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
         button.backgroundColor = .systemRed
-        button.layer.opacity = 0.3
+        button.layer.opacity = 0.4
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -34,7 +34,7 @@ final class FeelingsView: UIView, FeelingsViewType {
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
         button.backgroundColor = .systemBlue
-        button.layer.opacity = 0.3
+        button.layer.opacity = 0.4
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -45,7 +45,7 @@ final class FeelingsView: UIView, FeelingsViewType {
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
         button.backgroundColor = .systemGreen
-        button.layer.opacity = 0.3
+        button.layer.opacity = 0.4
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
