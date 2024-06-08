@@ -5,11 +5,14 @@ final class FeelingsPresenter {
     // MARK: - Private Properties
 
     private let networkManager: NetworkManagerType
-
+    private let adapter: FeelingsAdapterType
+    
     // MARK: - Init
 
-    init(networkManager: NetworkManagerType) {
+    init(networkManager: NetworkManagerType,
+         adapter: FeelingsAdapterType = FeelingsAdapter()) {
         self.networkManager = networkManager
+        self.adapter = adapter
     }
 
     // MARK: - Private Methods
@@ -23,10 +26,7 @@ final class FeelingsPresenter {
     private func handleInformations(result: APIResult) {
         switch result {
         case .success(let response):
-            let listSongs = response.results.map { value in
-                return SongViewCellViewModel(nameArtist: value.artistName, nameSong: value.trackName)
-            }
-            let viewModel = SongsModel(listSongs: listSongs)
+            let viewModel = adapter.adapt(songs: response)
         case .failure(let failure):
             return // TODO: Handle failure
         }

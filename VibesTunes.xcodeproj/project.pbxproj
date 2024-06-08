@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E01F84C2C149A150016DF49 /* FeelingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E01F84B2C149A150016DF49 /* FeelingsPresenter.swift */; };
+		7E01F84F2C14A4320016DF49 /* FeelingsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E01F84E2C14A4320016DF49 /* FeelingsAdapter.swift */; };
 		7E3AB3F02C11DCAC00C57EF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3AB3EF2C11DCAC00C57EF7 /* AppDelegate.swift */; };
 		7E3AB3F22C11DCAC00C57EF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3AB3F12C11DCAC00C57EF7 /* SceneDelegate.swift */; };
 		7E3AB3F92C11DCAE00C57EF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E3AB3F82C11DCAE00C57EF7 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		7E01F84B2C149A150016DF49 /* FeelingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsPresenter.swift; sourceTree = "<group>"; };
+		7E01F84E2C14A4320016DF49 /* FeelingsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsAdapter.swift; sourceTree = "<group>"; };
 		7E3AB3EC2C11DCAC00C57EF7 /* VibesTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VibesTunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E3AB3EF2C11DCAC00C57EF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E3AB3F12C11DCAC00C57EF7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 				7E01F84B2C149A150016DF49 /* FeelingsPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		7E01F84D2C14A4220016DF49 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				7E01F84E2C14A4320016DF49 /* FeelingsAdapter.swift */,
+			);
+			path = Adapter;
 			sourceTree = "<group>";
 		};
 		7E3AB3E32C11DCAC00C57EF7 = {
@@ -151,6 +161,7 @@
 		7E3AB4222C11E49800C57EF7 /* Feelings */ = {
 			isa = PBXGroup;
 			children = (
+				7E01F84D2C14A4220016DF49 /* Adapter */,
 				7E01F84A2C149A030016DF49 /* Presenter */,
 				7ED117FD2C137D4F000F0C55 /* View */,
 				7E3AB4252C11F36700C57EF7 /* NetworkManager */,
@@ -312,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E01F84F2C14A4320016DF49 /* FeelingsAdapter.swift in Sources */,
 				7ED118092C13F229000F0C55 /* SongViewCellViewModel.swift in Sources */,
 				7E01F84C2C149A150016DF49 /* FeelingsPresenter.swift in Sources */,
 				7EF928492C12A2CC007793AD /* Songs.swift in Sources */,
