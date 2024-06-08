@@ -22,12 +22,14 @@ final class FeelingsPresenter {
     // MARK: - Private Methods
 
     private func fetchData(typeSong: String) {
+        viewController?.startLoading()
         networkManager.fetchData(typeSong: typeSong) { [weak self] result in
             self?.handleInformations(result: result)
         }
     }
 
     private func handleInformations(result: APIResult) {
+        viewController?.stopLoading()
         switch result {
         case .success(let response):
             let songsModel = adapter.adapt(songs: response)
