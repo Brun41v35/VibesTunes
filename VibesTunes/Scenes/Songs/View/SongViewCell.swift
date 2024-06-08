@@ -7,6 +7,7 @@ final class SongViewCell: UITableViewCell {
     private let containerStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
+        stackView.spacing = 5
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
