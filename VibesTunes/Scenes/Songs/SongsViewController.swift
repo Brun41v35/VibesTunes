@@ -4,6 +4,8 @@ final class SongsViewController: UITableViewController {
 
     // MARK: - Private Properties
 
+    private let identifier = "SongViewCell"
+
     private let songsModel = SongsModel(listSongs: [
         SongViewCellViewModel(nameArtist: "nameArtist", nameSong: "nameSong"),
         SongViewCellViewModel(nameArtist: "nameArtist", nameSong: "nameSong"),
@@ -33,7 +35,7 @@ extension SongsViewController {
 
     override func tableView(_ tableView: UITableView,
                             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SongViewCell", for: indexPath) as? SongViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? SongViewCell else {
             return UITableViewCell()
         }
 
