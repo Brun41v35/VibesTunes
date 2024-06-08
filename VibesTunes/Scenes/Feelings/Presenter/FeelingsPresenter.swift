@@ -21,8 +21,8 @@ final class FeelingsPresenter {
 
     // MARK: - Private Methods
 
-    private func fetchData() {
-        networkManager.fetchData(typeSong: "sad") { [weak self] result in
+    private func fetchData(typeSong: String) {
+        networkManager.fetchData(typeSong: typeSong) { [weak self] result in
             self?.handleInformations(result: result)
         }
     }
@@ -42,7 +42,7 @@ final class FeelingsPresenter {
 
 extension FeelingsPresenter: FeelingsPresenterType {
 
-    func loadData() {
-        fetchData()
+    func loadData(with feeling: String) {
+        fetchData(typeSong: feeling)
     }
 }
