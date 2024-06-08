@@ -9,3 +9,7 @@ protocol NetworkManagerType {
 protocol FeelingsViewType where Self: UIView {
     var didTapSearchItem: (() -> Void)? { get set }
 }
+
+protocol FeelingsPresenterType {
+    func loadData()
+}
