@@ -1,9 +1,7 @@
 import UIKit
 
 protocol NetworkManagerType {
-    typealias Response = Swift.Result<(Songs), APIError>
-
-    func fetchData(typeSong: String, completion: @escaping (Response) -> Void)
+    func fetchData(typeSong: String, completion: @escaping (APIResult) -> Void)
 }
 
 protocol FeelingsViewType where Self: UIView {

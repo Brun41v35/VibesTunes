@@ -6,3 +6,5 @@ enum APIError: Error {
     case invalidData
     case unableToComplete
 }
+
+typealias APIResult = Swift.Result<Songs, APIError>
