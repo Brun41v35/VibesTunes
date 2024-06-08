@@ -25,7 +25,7 @@ final class SongsViewController: UITableViewController {
     }
 
     private func setupTableView() {
-        tableView.register(SongViewCell.self, forCellReuseIdentifier: "SongViewCell")
+        tableView.register(SongViewCell.self, forCellReuseIdentifier: identifier)
     }
 }
 
