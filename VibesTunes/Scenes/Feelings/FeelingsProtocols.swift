@@ -8,6 +8,8 @@ protocol FeelingsViewType where Self: UIView {
     var didTapHappyButton: (() -> Void)? { get set }
     var didTapNormalButton: (() -> Void)? { get set }
     var didTapSadButton: (() -> Void)? { get set }
+    func startLoading()
+    func stopLoading()
 }
 
 protocol FeelingsPresenterType {
@@ -21,4 +23,6 @@ protocol FeelingsAdapterType {
 
 protocol FeelingsViewControllerType: AnyObject {
     func pushSongsViewController(with viewModel: SongsModel)
+    func startLoading()
+    func stopLoading()
 }

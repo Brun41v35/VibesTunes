@@ -59,12 +59,21 @@ final class FeelingsViewController: UIViewController {
 extension FeelingsViewController: FeelingsViewControllerType {
 
     func pushSongsViewController(with viewModel: SongsModel) {
-
         #warning("TODO: Improve call `DispatchQueue.main.async`")
-
         DispatchQueue.main.async {
             let songsViewController = SongsViewController(songsModel: viewModel)
             self.navigationController?.pushViewController(songsViewController, animated: true)
+        }
+    }
+
+    func startLoading() {
+        contentView.startLoading()
+    }
+
+    func stopLoading() {
+        #warning("TODO: Improve call `DispatchQueue.main.async`")
+        DispatchQueue.main.async {
+            self.contentView.stopLoading()
         }
     }
 }

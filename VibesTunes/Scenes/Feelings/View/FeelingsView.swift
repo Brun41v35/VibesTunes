@@ -1,6 +1,6 @@
 import UIKit
 
-final class FeelingsView: UIView, FeelingsViewType {
+final class FeelingsView: UIView {
 
     // MARK: - Internal Properties
 
@@ -16,6 +16,12 @@ final class FeelingsView: UIView, FeelingsViewType {
         stackView.spacing = 20
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
+    }()
+
+    private let loadingView: UIActivityIndicatorView = {
+        let indicatorView = UIActivityIndicatorView()
+        indicatorView.translatesAutoresizingMaskIntoConstraints = false
+        return indicatorView
     }()
 
     private let sadFeelingButton: UIButton = {
@@ -74,6 +80,7 @@ final class FeelingsView: UIView, FeelingsViewType {
     }
 
     private func setupViewHierarchy() {
+        addSubview(loadingView)
         addSubview(containerStackView)
         containerStackView.addArrangedSubview(happyFeelingButton)
         containerStackView.addArrangedSubview(normalFeelingButton)
@@ -81,6 +88,11 @@ final class FeelingsView: UIView, FeelingsViewType {
     }
 
     private func setupConstraints() {
+        NSLayoutConstraint.activate([
+            loadingView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            loadingView.centerYAnchor.constraint(equalTo: centerYAnchor)
+        ])
+
         NSLayoutConstraint.activate([
             containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
             containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
@@ -125,5 +137,21 @@ final class FeelingsView: UIView, FeelingsViewType {
     @objc
     private func didTapSadAction() {
         didTapSadButton?()
+    }
+}
+
+
+// MARK: - FeelingsViewType
+
+extension FeelingsView: FeelingsViewType {
+
+    func startLoading() {
+        containerStackView.isHidden = true
+        loadingView.startAnimating()
+    }
+
+    func stopLoading() {
+        containerStackView.isHidden = false
+        loadingView.stopAnimating()
     }
 }
