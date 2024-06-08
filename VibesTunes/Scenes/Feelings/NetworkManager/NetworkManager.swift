@@ -25,12 +25,12 @@ extension NetworkManager: NetworkManagerType {
 
         session.dataTask(with: request) { data, response, error in
 
-            if let error = error {
+            if let _ = error {
                 completion(.failure(.unableToComplete))
                 return
             }
 
-            guard let response = response else {
+            guard let _ = response else {
                 completion(.failure(.invalidResponse))
                 return
             }
