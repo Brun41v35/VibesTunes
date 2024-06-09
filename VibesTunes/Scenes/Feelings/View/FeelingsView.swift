@@ -54,7 +54,7 @@ final class FeelingsView: UIView {
 
     private let sadFeelingButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Sad", for: .normal)
+        button.setTitle("Triste", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
@@ -77,7 +77,7 @@ final class FeelingsView: UIView {
 
     private let happyFeelingButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Happy", for: .normal)
+        button.setTitle("Feliz", for: .normal)
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
         button.backgroundColor = .systemGreen
