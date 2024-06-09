@@ -39,6 +39,14 @@ final class FeelingsView: UIView {
         return button
     }()
 
+    private let messageLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Como você está hoje ?"
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
     private let failureMessageLabel: UILabel = {
         let label = UILabel()
         label.text = "Não conseguimos pegar as musicas 😥"
@@ -113,6 +121,7 @@ final class FeelingsView: UIView {
         addSubview(failureStackView)
         failureStackView.addArrangedSubview(failureMessageLabel)
         failureStackView.addArrangedSubview(tryAgainButton)
+        containerStackView.addArrangedSubview(messageLabel)
         containerStackView.addArrangedSubview(happyFeelingButton)
         containerStackView.addArrangedSubview(normalFeelingButton)
         containerStackView.addArrangedSubview(sadFeelingButton)
