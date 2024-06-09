@@ -10,6 +10,7 @@ protocol FeelingsViewType where Self: UIView {
     var didTapSadButton: (() -> Void)? { get set }
     func startLoading()
     func stopLoading()
+    func showFailureMessage()
 }
 
 protocol FeelingsPresenterType {
@@ -25,4 +26,5 @@ protocol FeelingsViewControllerType: AnyObject {
     func pushSongsViewController(with viewModel: SongsModel)
     func startLoading()
     func stopLoading()
+    func showFailureMessage()
 }
