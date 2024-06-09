@@ -36,7 +36,13 @@ final class FeelingsViewController: UIViewController {
     // MARK: - Private Methods
 
     private func setup() {
+        setupNavigationTitle()
         setupBindLayoutEvents()
+    }
+
+    private func setupNavigationTitle() {
+        title = "Olá!"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     private func setupBindLayoutEvents() {
