@@ -26,8 +26,15 @@ final class SongsViewController: UITableViewController {
         setup()
     }
 
+    // MARK: - Private Methods
+
     private func setup() {
+        setupNavigationBar()
         setupTableView()
+    }
+
+    private func setupNavigationBar() {
+        title = "Sugestões de Músicas"
     }
 
     private func setupTableView() {
