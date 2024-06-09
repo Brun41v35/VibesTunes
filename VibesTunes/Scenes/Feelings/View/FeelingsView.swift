@@ -24,6 +24,14 @@ final class FeelingsView: UIView {
         return indicatorView
     }()
 
+    private let failureMessageLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Não conseguimos pegar as musicas 😥"
+        label.isHidden = true
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
     private let sadFeelingButton: UIButton = {
         let button = UIButton()
         button.setTitle("Sad", for: .normal)
@@ -82,6 +90,7 @@ final class FeelingsView: UIView {
     private func setupViewHierarchy() {
         addSubview(loadingView)
         addSubview(containerStackView)
+        addSubview(failureMessageLabel)
         containerStackView.addArrangedSubview(happyFeelingButton)
         containerStackView.addArrangedSubview(normalFeelingButton)
         containerStackView.addArrangedSubview(sadFeelingButton)
@@ -91,6 +100,11 @@ final class FeelingsView: UIView {
         NSLayoutConstraint.activate([
             loadingView.centerXAnchor.constraint(equalTo: centerXAnchor),
             loadingView.centerYAnchor.constraint(equalTo: centerYAnchor)
+        ])
+
+        NSLayoutConstraint.activate([
+            failureMessageLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            failureMessageLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
 
         NSLayoutConstraint.activate([
@@ -153,5 +167,9 @@ extension FeelingsView: FeelingsViewType {
     func stopLoading() {
         containerStackView.isHidden = false
         loadingView.stopAnimating()
+    }
+
+    func showFailureMessage() {
+        failureMessageLabel.isHidden = false
     }
 }
