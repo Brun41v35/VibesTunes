@@ -34,8 +34,8 @@ final class FeelingsPresenter {
         case .success(let response):
             let songsModel = adapter.adapt(songs: response)
             viewController?.pushSongsViewController(with: songsModel)
-        case .failure(let failure):
-            return // TODO: Handle failure
+        case .failure:
+            viewController?.showFailureMessage()
         }
     }
 }

@@ -18,18 +18,38 @@ final class FeelingsView: UIView {
         return stackView
     }()
 
-    private let loadingView: UIActivityIndicatorView = {
-        let indicatorView = UIActivityIndicatorView()
-        indicatorView.translatesAutoresizingMaskIntoConstraints = false
-        return indicatorView
+    private let failureStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 20
+        stackView.isHidden = true
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+
+    private let tryAgainButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Tentar novamente", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 8
+        button.backgroundColor = .systemRed
+        button.layer.opacity = 0.4
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }()
 
     private let failureMessageLabel: UILabel = {
         let label = UILabel()
         label.text = "Não conseguimos pegar as musicas 😥"
-        label.isHidden = true
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
+    }()
+
+    private let loadingView: UIActivityIndicatorView = {
+        let indicatorView = UIActivityIndicatorView()
+        indicatorView.translatesAutoresizingMaskIntoConstraints = false
+        return indicatorView
     }()
 
     private let sadFeelingButton: UIButton = {
@@ -90,7 +110,9 @@ final class FeelingsView: UIView {
     private func setupViewHierarchy() {
         addSubview(loadingView)
         addSubview(containerStackView)
-        addSubview(failureMessageLabel)
+        addSubview(failureStackView)
+        failureStackView.addArrangedSubview(failureMessageLabel)
+        failureStackView.addArrangedSubview(tryAgainButton)
         containerStackView.addArrangedSubview(happyFeelingButton)
         containerStackView.addArrangedSubview(normalFeelingButton)
         containerStackView.addArrangedSubview(sadFeelingButton)
@@ -103,8 +125,8 @@ final class FeelingsView: UIView {
         ])
 
         NSLayoutConstraint.activate([
-            failureMessageLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            failureMessageLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
+            failureStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            failureStackView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
 
         NSLayoutConstraint.activate([
@@ -116,7 +138,8 @@ final class FeelingsView: UIView {
         NSLayoutConstraint.activate([
             happyFeelingButton.heightAnchor.constraint(equalToConstant: 50),
             normalFeelingButton.heightAnchor.constraint(equalToConstant: 50),
-            sadFeelingButton.heightAnchor.constraint(equalToConstant: 50)
+            sadFeelingButton.heightAnchor.constraint(equalToConstant: 50),
+            tryAgainButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
 
@@ -132,6 +155,10 @@ final class FeelingsView: UIView {
         sadFeelingButton.addTarget(self,
                                    action: #selector(didTapSadAction),
                                    for: .touchUpInside)
+
+        tryAgainButton.addTarget(self,
+                                 action: #selector(didTapSadAction),
+                                 for: .touchUpInside)
     }
 
     private func setupBackgroundColor() {
@@ -170,6 +197,8 @@ extension FeelingsView: FeelingsViewType {
     }
 
     func showFailureMessage() {
-        failureMessageLabel.isHidden = false
+        loadingView.stopAnimating()
+        containerStackView.isHidden = true
+        failureStackView.isHidden = false
     }
 }

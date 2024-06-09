@@ -76,4 +76,11 @@ extension FeelingsViewController: FeelingsViewControllerType {
             self.contentView.stopLoading()
         }
     }
+
+    func showFailureMessage() {
+        #warning("TODO: Improve call `DispatchQueue.main.async`")
+        DispatchQueue.main.async {
+            self.contentView.showFailureMessage()
+        }
+    }
 }
