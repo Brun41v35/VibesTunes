@@ -9,7 +9,7 @@ protocol FeelingsViewType where Self: UIView {
     var didTapNormalButton: (() -> Void)? { get set }
     var didTapSadButton: (() -> Void)? { get set }
     func startLoading()
-    func stopLoading()  
+    func stopLoading()
     func showFailureMessage()
 }
 

@@ -157,7 +157,7 @@ final class FeelingsView: UIView {
                                    for: .touchUpInside)
 
         tryAgainButton.addTarget(self,
-                                 action: #selector(didTapSadAction),
+                                 action: #selector(didTapTryAgainAction),
                                  for: .touchUpInside)
     }
 
@@ -179,6 +179,11 @@ final class FeelingsView: UIView {
     private func didTapSadAction() {
         didTapSadButton?()
     }
+
+    @objc
+    private func didTapTryAgainAction() {
+        stopLoading()
+    }
 }
 
 
@@ -192,6 +197,7 @@ extension FeelingsView: FeelingsViewType {
     }
 
     func stopLoading() {
+        failureStackView.isHidden = true
         containerStackView.isHidden = false
         loadingView.stopAnimating()
     }
