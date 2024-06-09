@@ -43,6 +43,7 @@ final class FeelingsViewController: UIViewController {
     private func setupNavigationTitle() {
         title = "Olá!"
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.backButtonTitle = ""
     }
 
     private func setupBindLayoutEvents() {
