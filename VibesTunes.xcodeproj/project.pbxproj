@@ -97,6 +97,7 @@
 		7E3AB3E32C11DCAC00C57EF7 = {
 			isa = PBXGroup;
 			children = (
+				7ED3BCE22C17D0F300D803D4 /* README.md */,
 				7E3AB3EE2C11DCAC00C57EF7 /* VibesTunes */,
 				7E3AB4052C11DCAE00C57EF7 /* VibesTunesTests */,
 				7E3AB3ED2C11DCAC00C57EF7 /* Products */,
@@ -119,7 +120,6 @@
 				7E3AB41F2C11DF3E00C57EF7 /* AppDelegate */,
 				7E3AB4212C11DFAE00C57EF7 /* Scenes */,
 				7E3AB4202C11DF4B00C57EF7 /* Resources */,
-				7ED3BCE22C17D0F300D803D4 /* README.md */,
 			);
 			path = VibesTunes;
 			sourceTree = "<group>";
