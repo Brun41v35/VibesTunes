@@ -56,6 +56,7 @@
 		7ED118062C13F0D6000F0C55 /* SongViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewCell.swift; sourceTree = "<group>"; };
 		7ED118082C13F229000F0C55 /* SongViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewCellViewModel.swift; sourceTree = "<group>"; };
 		7ED1180B2C13FC87000F0C55 /* SongsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsModel.swift; sourceTree = "<group>"; };
+		7ED3BCE22C17D0F300D803D4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7EF928482C12A2CC007793AD /* Songs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Songs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +119,7 @@
 				7E3AB41F2C11DF3E00C57EF7 /* AppDelegate */,
 				7E3AB4212C11DFAE00C57EF7 /* Scenes */,
 				7E3AB4202C11DF4B00C57EF7 /* Resources */,
+				7ED3BCE22C17D0F300D803D4 /* README.md */,
 			);
 			path = VibesTunes;
 			sourceTree = "<group>";
