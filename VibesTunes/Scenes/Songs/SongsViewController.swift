@@ -1,3 +1,4 @@
+import AVFoundation
 import UIKit
 
 final class SongsViewController: UITableViewController {
@@ -6,6 +7,7 @@ final class SongsViewController: UITableViewController {
 
     private let identifier = "SongViewCell"
     private let songsModel: SongsModel
+    private var player: AVPlayer?
 
     // MARK: - Init
 
@@ -40,6 +42,12 @@ final class SongsViewController: UITableViewController {
     private func setupTableView() {
         tableView.register(SongViewCell.self, forCellReuseIdentifier: identifier)
     }
+
+    func playMusic(url: String) {
+        guard let url = URL(string: url) else { return }
+        player = AVPlayer(url: url)
+        player?.play()
+    }
 }
 
 // MARK: - Extension
@@ -63,5 +71,11 @@ extension SongsViewController {
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
         return songsModel.listSongs.count
+    }
+
+    override func tableView(_ tableView: UITableView,
+                            didSelectRowAt indexPath: IndexPath) {
+        let music = songsModel.listSongs[indexPath.row]
+        playMusic(url: music.previewURL)
     }
 }
