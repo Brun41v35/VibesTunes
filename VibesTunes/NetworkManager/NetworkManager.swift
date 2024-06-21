@@ -11,11 +11,6 @@ final class NetworkManager {
     init(session: URLSession = .shared) {
         self.session = session
     }
-}
-
-// MARK: - Extension
-
-extension NetworkManager: NetworkManagerType {
 
     func fetchData(typeSong: String,
                    completion: @escaping (APIResult) -> Void) {
