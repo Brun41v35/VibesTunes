@@ -118,6 +118,7 @@
 			children = (
 				7EF928472C12A2A9007793AD /* Model */,
 				7E3AB41F2C11DF3E00C57EF7 /* AppDelegate */,
+				7E3AB4252C11F36700C57EF7 /* NetworkManager */,
 				7E3AB4212C11DFAE00C57EF7 /* Scenes */,
 				7E3AB4202C11DF4B00C57EF7 /* Resources */,
 			);
@@ -165,7 +166,6 @@
 				7E01F84D2C14A4220016DF49 /* Adapter */,
 				7E01F84A2C149A030016DF49 /* Presenter */,
 				7ED117FD2C137D4F000F0C55 /* View */,
-				7E3AB4252C11F36700C57EF7 /* NetworkManager */,
 				7E3AB4232C11E4AD00C57EF7 /* FeelingsViewController.swift */,
 				7E3AB4282C11F41000C57EF7 /* FeelingsProtocols.swift */,
 			);
