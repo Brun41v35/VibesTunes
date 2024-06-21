@@ -11,9 +11,7 @@
 		7E3AB3F92C11DCAE00C57EF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E3AB3F82C11DCAE00C57EF7 /* Assets.xcassets */; };
 		7E3AB3FC2C11DCAE00C57EF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E3AB3FA2C11DCAE00C57EF7 /* LaunchScreen.storyboard */; };
 		7E3AB4072C11DCAE00C57EF7 /* VibesTunesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3AB4062C11DCAE00C57EF7 /* VibesTunesTests.swift */; };
-		7E3AB4242C11E4AD00C57EF7 /* FeelingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3AB4232C11E4AD00C57EF7 /* FeelingsViewController.swift */; };
 		7E3AB4272C11F38A00C57EF7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3AB4262C11F38A00C57EF7 /* NetworkManager.swift */; };
-		7E3AB4292C11F41000C57EF7 /* FeelingsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3AB4282C11F41000C57EF7 /* FeelingsProtocols.swift */; };
 		7E7559262C24DB2600EFEF36 /* FeelingsButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7559252C24DB2600EFEF36 /* FeelingsButtonsView.swift */; };
 		7ED117FF2C137D55000F0C55 /* FeelingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED117FE2C137D55000F0C55 /* FeelingsView.swift */; };
 		7ED118012C138E57000F0C55 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED118002C138E57000F0C55 /* APIError.swift */; };
@@ -42,9 +40,7 @@
 		7E3AB3FD2C11DCAE00C57EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E3AB4022C11DCAE00C57EF7 /* VibesTunesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VibesTunesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E3AB4062C11DCAE00C57EF7 /* VibesTunesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibesTunesTests.swift; sourceTree = "<group>"; };
-		7E3AB4232C11E4AD00C57EF7 /* FeelingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsViewController.swift; sourceTree = "<group>"; };
 		7E3AB4262C11F38A00C57EF7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		7E3AB4282C11F41000C57EF7 /* FeelingsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsProtocols.swift; sourceTree = "<group>"; };
 		7E7559252C24DB2600EFEF36 /* FeelingsButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsButtonsView.swift; sourceTree = "<group>"; };
 		7ED117FE2C137D55000F0C55 /* FeelingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsView.swift; sourceTree = "<group>"; };
 		7ED118002C138E57000F0C55 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -144,8 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				7ED117FD2C137D4F000F0C55 /* View */,
-				7E3AB4232C11E4AD00C57EF7 /* FeelingsViewController.swift */,
-				7E3AB4282C11F41000C57EF7 /* FeelingsProtocols.swift */,
 			);
 			path = Feelings;
 			sourceTree = "<group>";
@@ -308,12 +302,10 @@
 				7ED1180C2C13FC87000F0C55 /* SongsModel.swift in Sources */,
 				7ED118042C13B2DF000F0C55 /* SongsViewController.swift in Sources */,
 				7E3AB4272C11F38A00C57EF7 /* NetworkManager.swift in Sources */,
-				7E3AB4292C11F41000C57EF7 /* FeelingsProtocols.swift in Sources */,
 				7ED117FF2C137D55000F0C55 /* FeelingsView.swift in Sources */,
 				7E7559262C24DB2600EFEF36 /* FeelingsButtonsView.swift in Sources */,
 				7ED118012C138E57000F0C55 /* APIError.swift in Sources */,
 				7ED118072C13F0D7000F0C55 /* SongViewCell.swift in Sources */,
-				7E3AB4242C11E4AD00C57EF7 /* FeelingsViewController.swift in Sources */,
 				7E3AB3F22C11DCAC00C57EF7 /* VibesTunesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
