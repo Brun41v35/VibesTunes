@@ -93,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				7EF928472C12A2A9007793AD /* Model */,
-				7E3AB41F2C11DF3E00C57EF7 /* AppDelegate */,
+				7E3AB3F12C11DCAC00C57EF7 /* VibesTunesApp.swift */,
 				7E3AB4252C11F36700C57EF7 /* NetworkManager */,
 				7E3AB4212C11DFAE00C57EF7 /* Scenes */,
 				7E3AB4202C11DF4B00C57EF7 /* Resources */,
@@ -107,14 +107,6 @@
 				7E3AB4062C11DCAE00C57EF7 /* VibesTunesTests.swift */,
 			);
 			path = VibesTunesTests;
-			sourceTree = "<group>";
-		};
-		7E3AB41F2C11DF3E00C57EF7 /* AppDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				7E3AB3F12C11DCAC00C57EF7 /* VibesTunesApp.swift */,
-			);
-			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		7E3AB4202C11DF4B00C57EF7 /* Resources */ = {
