@@ -1,6 +1,7 @@
 import Foundation
 
-struct SongsModel {
+struct SongsModel: Identifiable {
+    let id = UUID()
     let nameArtist: String
     let nameSong: String
 }
@@ -15,8 +16,8 @@ struct SongsList {
             SongsModel(nameArtist: "Iron Maiden",
                        nameSong: "Rainmaker"),
 
-            SongsModel(nameArtist: "Ariana Grande",
-                       nameSong: "Problem")
+            SongsModel(nameArtist: "Jan Blomqvist",
+                       nameSong: "The Space in Between")
         ]
     }
 }
