@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct SongViewCell: View {
-    
+
     var body: some View {
         VStack(spacing: 5) {
             Text("Name Music")
