@@ -17,7 +17,8 @@ struct FeelingsView: View {
                 } label: {
                     FeelingsButtonsView(iconFeeling: "☺️",
                                         title: "Happy",
-                                        backgroundButtonColor: Color.green)
+                                        backgroundButtonColor: Color.green,
+                                        bottomButtonColor: Color.orange)
                 }
 
                 Button {
@@ -25,7 +26,8 @@ struct FeelingsView: View {
                 } label: {
                     FeelingsButtonsView(iconFeeling: "😐",
                                         title: "Normal",
-                                        backgroundButtonColor: Color.blue)
+                                        backgroundButtonColor: Color.orange,
+                                        bottomButtonColor: Color.blue)
                 }
 
                 Button {
@@ -33,7 +35,8 @@ struct FeelingsView: View {
                 } label: {
                     FeelingsButtonsView(iconFeeling: "😢",
                                         title: "Sad",
-                                        backgroundButtonColor: Color.red)
+                                        backgroundButtonColor: Color.red,
+                                        bottomButtonColor: Color.orange)
                 }
             }
         }
