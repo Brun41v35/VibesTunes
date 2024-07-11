@@ -11,7 +11,7 @@ struct FeelingsView: View {
                            endPoint: .bottom)
             .ignoresSafeArea()
 
-            HStack {
+            VStack(spacing: 20) {
                 Button {
                     print("Go to happy list")
                 } label: {
@@ -32,7 +32,7 @@ struct FeelingsView: View {
                     print("Go to sad list")
                 } label: {
                     FeelingsButtonsView(iconFeeling: "😢",
-                                        title: "Triste",
+                                        title: "Sad",
                                         backgroundButtonColor: Color.red)
                 }
             }
