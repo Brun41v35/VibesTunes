@@ -7,9 +7,20 @@ struct FeelingsButtonsView: View {
     var backgroundButtonColor: Color
     var bottomButtonColor: Color
 
+    @State var isAnimating = false
+
     var body: some View {
 
         ZStack {
+            LinearGradient(colors: [Color.red, Color.orange],
+                           startPoint: isAnimating ? .topTrailing : .bottomLeading,
+                           endPoint: isAnimating ? .bottomTrailing : .center)
+            .animation(.easeInOut(duration: 1)
+                .repeatForever(autoreverses: true), value: isAnimating)
+            .frame(width: 150, height: 150)
+            .clipShape(RoundedRectangle(cornerRadius: 16))
+            .blur(radius: 8)
+
             LinearGradient(colors: [backgroundButtonColor, bottomButtonColor],
                            startPoint: .top,
                            endPoint: .bottom)
@@ -22,6 +33,10 @@ struct FeelingsButtonsView: View {
                 Text(title)
                     .tint(.white)
                     .font(.system(size: 20, weight: .semibold, design: .default))
+            }
+
+            .onAppear {
+                isAnimating.toggle()
             }
         }
     }

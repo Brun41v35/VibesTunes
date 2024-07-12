@@ -7,8 +7,8 @@ struct FeelingsView: View {
         ZStack {
 
             LinearGradient(colors: [.blue, .black],
-                           startPoint: .top,
-                           endPoint: .bottom)
+                           startPoint: .topTrailing,
+                           endPoint: .bottomLeading)
             .ignoresSafeArea()
 
             VStack(spacing: 20) {
