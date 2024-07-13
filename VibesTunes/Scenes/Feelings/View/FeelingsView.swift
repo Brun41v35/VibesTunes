@@ -4,40 +4,32 @@ struct FeelingsView: View {
 
     var body: some View {
 
-        ZStack {
+        VStack(spacing: 20) {
+            Button {
+                print("Go to happy list")
+            } label: {
+                FeelingsButtonsView(iconFeeling: "☺️",
+                                    title: "Happy",
+                                    backgroundButtonColor: Color.green,
+                                    bottomButtonColor: Color.orange)
+            }
 
-            LinearGradient(colors: [.black, .black],
-                           startPoint: .topTrailing,
-                           endPoint: .bottomLeading)
-            .ignoresSafeArea()
+            Button {
+                print("Go to normal list")
+            } label: {
+                FeelingsButtonsView(iconFeeling: "😐",
+                                    title: "Normal",
+                                    backgroundButtonColor: Color.orange,
+                                    bottomButtonColor: Color.blue)
+            }
 
-            VStack(spacing: 20) {
-                Button {
-                    print("Go to happy list")
-                } label: {
-                    FeelingsButtonsView(iconFeeling: "☺️",
-                                        title: "Happy",
-                                        backgroundButtonColor: Color.green,
-                                        bottomButtonColor: Color.orange)
-                }
-
-                Button {
-                    print("Go to normal list")
-                } label: {
-                    FeelingsButtonsView(iconFeeling: "😐",
-                                        title: "Normal",
-                                        backgroundButtonColor: Color.orange,
-                                        bottomButtonColor: Color.blue)
-                }
-
-                Button {
-                    print("Go to sad list")
-                } label: {
-                    FeelingsButtonsView(iconFeeling: "😢",
-                                        title: "Sad",
-                                        backgroundButtonColor: Color.red,
-                                        bottomButtonColor: Color.orange)
-                }
+            Button {
+                print("Go to sad list")
+            } label: {
+                FeelingsButtonsView(iconFeeling: "😢",
+                                    title: "Sad",
+                                    backgroundButtonColor: Color.red,
+                                    bottomButtonColor: Color.orange)
             }
         }
     }
