@@ -6,7 +6,7 @@ struct FeelingsView: View {
 
         ZStack {
 
-            LinearGradient(colors: [.blue, .black],
+            LinearGradient(colors: [.black, .black],
                            startPoint: .topTrailing,
                            endPoint: .bottomLeading)
             .ignoresSafeArea()
